@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); /* Dynamic background gradient */
+    animation: gradientBackground 10s ease infinite; /* Smooth gradient transition */
+}
+
+@keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.calculator {
+    padding: 25px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Deep shadow */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+}
+
+input {
+    width: 340px;
+    border: none;
+    padding: 20px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.3); /* Inset shadow */
+    font-size: 36px;
+    text-align: right;
+    color: #ffffff; /* White text color */
+    border-radius: 15px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Lighter white for placeholder */
+}
+
+.button {
+    border: none;
+    width: 70px;
+    height: 70px;
+    margin: 12px;
+    background: linear-gradient(145deg, #3b3b3b, #1c1c1c); /* 3D button gradient */
+    color: #ffffff; /* White text */
+    font-size: 22px;
+    border-radius: 15px; /* Default square button with rounded corners */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), -5px -5px 10px rgba(255, 255, 255, 0.1); /* Neumorphism effect */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background: linear-gradient(145deg, #4b4b4b, #2c2c2c); /* Lighter 3D gradient on hover */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4), -10px -10px 20px rgba(255, 255, 255, 0.1); /* Enhanced shadow */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+.button:active {
+    transform: translateY(2px); /* Pressed effect */
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.4), inset -3px -3px 6px rgba(255, 255, 255, 0.1); /* Inset shadow */
+}
+
+/* Circular shape for operators */
+.operator {
+    border-radius: 50%; /* Circle shape */
+    background: linear-gradient(145deg, #29a3a3, #007373); /* Teal gradient */
+    color: #ffffff; /* White text */
+}
+
+.operator:hover {
+    background: linear-gradient(145deg, #34cfcf, #00a8a8); /* Brighter gradient on hover */
+    color: #f0f0f0; /* Light text color */
+}
+
+/* Equal button with unique styling */
+.equalBtn {
+    background: linear-gradient(145deg, #ff8f70, #ff6f50); /* Bright orange gradient */
+    color: #ffffff; /* White text */
+    border-radius: 20px; /* Rounded rectangle shape */
+    box-shadow: 5px 5px 15px rgba(255, 111, 97, 0.5), -5px -5px 15px rgba(255, 255, 255, 0.1); /* Soft glow */
+}
+
+.equalBtn:hover {
+    background: linear-gradient(145deg, #ffb397, #ff8767); /* Brighter gradient on hover */
+}
